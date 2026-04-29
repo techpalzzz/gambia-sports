@@ -58,7 +58,7 @@ export default async function FixturesPage() {
           fixtures.map((match) => (
             <div
               key={match.id}
-              className="bg-white rounded-lg shadow p-4 flex justify-between items-center"
+              className="bg-white text-gray-900 rounded-lg shadow p-4 flex justify-between items-center"
             >
               <span className="font-medium w-2/5 text-right">
                 {match.home_team.name}

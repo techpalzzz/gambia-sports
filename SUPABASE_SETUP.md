@@ -134,11 +134,13 @@ INSERT INTO leagues (name, slug, logo_url) VALUES
 ### 2. Create a Season
 
 First, get your league ID by running:
+
 ```sql
 SELECT id FROM leagues LIMIT 1;
 ```
 
 Then use that ID in this query:
+
 ```sql
 INSERT INTO seasons (league_id, name, start_date, end_date, status) VALUES
   ('YOUR_LEAGUE_ID_HERE', '2026 Season', '2026-01-01', '2026-12-31', 'active');
@@ -159,18 +161,20 @@ INSERT INTO teams (league_id, name, slug, home_ground, founded_year) VALUES
 ### 4. Create Players
 
 Get team IDs first:
+
 ```sql
 SELECT id, name FROM teams;
 ```
 
 Then add players (replace IDs):
+
 ```sql
 INSERT INTO players (team_id, name, position, jersey_number) VALUES
   ('TEAM_ID_1', 'Muhammed Jallow', 'GK', 1),
   ('TEAM_ID_1', 'Omar Camara', 'DEF', 2),
   ('TEAM_ID_1', 'Ebrima Darboe', 'MID', 7),
   ('TEAM_ID_1', 'Lamin Sambou', 'FWD', 9),
-  
+
   ('TEAM_ID_2', 'Hassan Jallow', 'GK', 1),
   ('TEAM_ID_2', 'Abdoulie Camara', 'DEF', 3),
   ('TEAM_ID_2', 'Musa Ceesay', 'MID', 8),
@@ -180,12 +184,14 @@ INSERT INTO players (team_id, name, position, jersey_number) VALUES
 ### 5. Create Matches
 
 Get your season and team IDs:
+
 ```sql
 SELECT id FROM seasons LIMIT 1;
 SELECT id, name FROM teams LIMIT 10;
 ```
 
 Then create matches:
+
 ```sql
 INSERT INTO matches (season_id, home_team_id, away_team_id, scheduled_at, venue, status, home_score, away_score) VALUES
   ('SEASON_ID', 'TEAM_1_ID', 'TEAM_2_ID', '2026-04-25 16:00:00', 'National Stadium', 'completed', 2, 1),
@@ -202,12 +208,12 @@ After running all scripts, test by running this query:
 
 ```sql
 -- Check all tables exist
-SELECT table_name FROM information_schema.tables 
-WHERE table_schema = 'public' 
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'public'
 ORDER BY table_name;
 
 -- Count records in each table
-SELECT 
+SELECT
   (SELECT COUNT(*) FROM leagues) as leagues_count,
   (SELECT COUNT(*) FROM seasons) as seasons_count,
   (SELECT COUNT(*) FROM teams) as teams_count,
@@ -220,19 +226,23 @@ SELECT
 ## Troubleshooting
 
 ### "Error loading data" on home page
+
 - Verify your league has an active season (`status = 'active'`)
 - Ensure at least one league exists
 - Check that the season's `league_id` matches your league's `id`
 
 ### "No leagues available yet"
+
 - You haven't created any leagues yet
 - Run the "Create a League" SQL script above
 
 ### "No active season"
+
 - Create a season with `status = 'active'`
 - Make sure the season belongs to your league
 
 ### Can't see standings/fixtures
+
 - Verify you have teams in your league
 - Verify you have matches scheduled for your season
 - Check that matches have the correct season_id
@@ -251,11 +261,13 @@ SELECT
 ## Need Help?
 
 Check these Supabase docs:
+
 - [SQL Editor](https://supabase.com/docs/guides/database/sql-editor)
 - [Creating Tables](https://supabase.com/docs/guides/database/tables)
 - [Row Level Security](https://supabase.com/docs/guides/auth/row-level-security)
 
 Once data is added, the website will immediately show:
+
 - Standings table with team records
 - Fixtures with upcoming matches
 - Results with completed matches

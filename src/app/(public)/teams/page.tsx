@@ -60,7 +60,7 @@ export default async function TeamsPage() {
         {teams.length > 0 ? (
           teams.map((team) => (
             <Link key={team.id} href={`/teams/${team.slug}`}>
-              <div className="bg-white rounded-lg shadow p-4 hover:shadow-md transition cursor-pointer">
+              <div className="bg-white text-gray-900 rounded-lg shadow p-4 hover:shadow-md transition cursor-pointer">
                 <h2 className="font-bold text-lg mb-1">{team.name}</h2>
                 {team.home_ground && (
                   <p className="text-sm text-gray-600">Home: {team.home_ground}</p>

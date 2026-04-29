@@ -7,12 +7,15 @@ You're seeing "Error loading data. Please try again later." This means the Supab
 ## The Solution (5 Minutes)
 
 ### Step 1: Open Supabase Console
+
 Go to: https://app.supabase.com → Select your project
 
 ### Step 2: Go to SQL Editor
+
 Click **SQL Editor** in the left sidebar
 
 ### Step 3: Run Setup Scripts
+
 Copy the scripts from [SUPABASE_SETUP.md](SUPABASE_SETUP.md) and run them one by one:
 
 1. **Create Leagues Table** (Script 1)
@@ -24,6 +27,7 @@ Copy the scripts from [SUPABASE_SETUP.md](SUPABASE_SETUP.md) and run them one by
 **Each time:** Paste → Click Run ✓
 
 ### Step 4: Add Test Data
+
 Run these in order (from SUPABASE_SETUP.md):
 
 1. Create a League
@@ -33,9 +37,11 @@ Run these in order (from SUPABASE_SETUP.md):
 5. Create Matches (use season and team IDs)
 
 ### Step 5: Refresh Website
+
 Go back to your Gambia Sports site and refresh the page.
 
 ✅ You should now see:
+
 - Standings table with your teams
 - Upcoming fixtures
 - Completed results
@@ -65,12 +71,12 @@ SELECT id, name FROM teams;
 
 ## Common Issues
 
-| Error | Cause | Fix |
-|-------|-------|-----|
-| "Error loading data" | Tables don't exist | Run all 5 Create Table scripts |
-| "No leagues available yet" | No leagues in database | Run "Create a League" script |
-| "No active season" | Season status isn't 'active' | Check season status is 'active' |
-| "No teams" on standings | No teams in league | Create teams with correct league_id |
+| Error                      | Cause                        | Fix                                 |
+| -------------------------- | ---------------------------- | ----------------------------------- |
+| "Error loading data"       | Tables don't exist           | Run all 5 Create Table scripts      |
+| "No leagues available yet" | No leagues in database       | Run "Create a League" script        |
+| "No active season"         | Season status isn't 'active' | Check season status is 'active'     |
+| "No teams" on standings    | No teams in league           | Create teams with correct league_id |
 
 ---
 
@@ -80,12 +86,12 @@ Run this to check:
 
 ```sql
 -- Shows if tables exist
-SELECT table_name FROM information_schema.tables 
-WHERE table_schema = 'public' 
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'public'
 ORDER BY table_name;
 
 -- Shows data counts
-SELECT 
+SELECT
   (SELECT COUNT(*) FROM leagues) as leagues,
   (SELECT COUNT(*) FROM seasons) as seasons,
   (SELECT COUNT(*) FROM teams) as teams,
@@ -94,9 +100,10 @@ SELECT
 ```
 
 You should see:
+
 ```
 leagues: 1
-seasons: 1  
+seasons: 1
 teams: 4 (or more)
 players: 8+ (or more)
 matches: 2+ (or more)
@@ -107,6 +114,7 @@ matches: 2+ (or more)
 ## Full Details
 
 See **[SUPABASE_SETUP.md](SUPABASE_SETUP.md)** for:
+
 - Complete SQL scripts with explanations
 - How to add multiple teams and players
 - How to create realistic match data
@@ -117,6 +125,7 @@ See **[SUPABASE_SETUP.md](SUPABASE_SETUP.md)** for:
 ## Still Not Working?
 
 Check:
+
 1. ✅ Supabase project is active (check https://app.supabase.com)
 2. ✅ Your `.env.local` has correct API keys
 3. ✅ All 5 tables were created (check in Supabase Editor)

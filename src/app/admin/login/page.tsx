@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form
         onSubmit={handleLogin}
-        className="bg-white p-8 rounded-lg shadow w-full max-w-sm"
+        className="bg-white text-gray-900 p-8 rounded-lg shadow w-full max-w-sm"
       >
         <h1 className="text-2xl font-bold mb-6 text-center">Admin Login</h1>
 

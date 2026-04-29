@@ -32,34 +32,34 @@ export default function AdminDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a
             href="/admin/teams"
-            className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
+            className="bg-white text-gray-900 rounded-lg shadow p-6 hover:shadow-lg transition"
           >
             <h2 className="font-bold text-lg mb-2">Teams</h2>
-            <p className="text-gray-500 text-sm">Add and manage teams</p>
+            <p className="text-gray-600 text-sm">Add and manage teams</p>
           </a>
 
           <a
             href="/admin/players"
-            className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
+            className="bg-white text-gray-900 rounded-lg shadow p-6 hover:shadow-lg transition"
           >
             <h2 className="font-bold text-lg mb-2">Players</h2>
-            <p className="text-gray-500 text-sm">Register and manage players</p>
+            <p className="text-gray-600 text-sm">Register and manage players</p>
           </a>
 
           <a
             href="/admin/matches"
-            className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
+            className="bg-white text-gray-900 rounded-lg shadow p-6 hover:shadow-lg transition"
           >
-            <h2 className="font-bold text-lg mb-2">Matches</h2>
-            <p className="text-gray-500 text-sm">Enter results and schedule fixtures</p>
+            <h2 className="font-bold text-lg mb-2\">Matches</h2>
+            <p className="text-gray-600 text-sm\">Enter results and schedule fixtures</p>
           </a>
 
           <a
             href="/admin/fixtures/new"
-            className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition"
+            className="bg-white text-gray-900 rounded-lg shadow p-6 hover:shadow-lg transition"
           >
             <h2 className="font-bold text-lg mb-2">Schedule Fixture</h2>
-            <p className="text-gray-500 text-sm">Create a new upcoming match</p>
+            <p className="text-gray-600 text-sm">Create a new upcoming match</p>
           </a>
         </div>
       </div>

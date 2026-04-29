@@ -46,13 +46,13 @@ export default async function TeamPage({
 
   return (
     <main className="max-w-3xl mx-auto p-4">
-      <div className="bg-white rounded-lg shadow p-6 mb-6">
+      <div className="bg-white text-gray-900 rounded-lg shadow p-6 mb-6">
         <h1 className="text-3xl font-bold mb-2">{team.name}</h1>
         {team.home_ground && (
-          <p className="text-gray-600 mb-2">Home: {team.home_ground}</p>
+          <p className="text-gray-700 mb-2">Home: {team.home_ground}</p>
         )}
         {team.founded_year && (
-          <p className="text-gray-600">Founded: {team.founded_year}</p>
+          <p className="text-gray-700">Founded: {team.founded_year}</p>
         )}
       </div>
 
@@ -62,7 +62,7 @@ export default async function TeamPage({
           {team.players.map((player: Player) => (
             <div
               key={player.id}
-              className="bg-white rounded-lg p-4 flex items-center gap-4 shadow hover:shadow-md"
+              className="bg-white text-gray-900 rounded-lg p-4 flex items-center gap-4 shadow hover:shadow-md"
             >
               <span className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700">
                 {player.jersey_number ?? '-'}

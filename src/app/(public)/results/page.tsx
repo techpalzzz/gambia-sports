@@ -57,7 +57,7 @@ export default async function ResultsPage() {
       <div className="space-y-3">
         {results.length > 0 ? (
           results.map((match) => (
-            <div key={match.id} className="bg-white rounded-lg shadow p-4">
+            <div key={match.id} className="bg-white text-gray-900 rounded-lg shadow p-4">
               <div className="flex justify-between items-center">
                 <span className="font-medium w-2/5 text-right">
                   {match.home_team.name}

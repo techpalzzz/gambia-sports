@@ -139,7 +139,7 @@ export default async function StandingsPage() {
   return (
     <main className="max-w-3xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">League Standings</h1>
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white text-gray-900 rounded-lg shadow overflow-hidden">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-blue-800 text-white">

@@ -146,7 +146,7 @@ function AdminPlayersContent() {
       </div>
 
       {showForm && selectedTeam && (
-        <form onSubmit={handleAddPlayer} className="bg-white rounded-lg shadow p-6 mb-6">
+        <form onSubmit={handleAddPlayer} className="bg-white text-gray-900 rounded-lg shadow p-6 mb-6">
           <h2 className="font-bold text-lg mb-4">Add New Player</h2>
           <div className="space-y-4">
             <div>

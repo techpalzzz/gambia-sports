@@ -85,7 +85,7 @@ export default async function HomePage() {
         <div className="bg-blue-800 text-white rounded-lg p-6 mb-6 text-center">
           <h1 className="text-3xl font-bold">Gambia Sports Platform</h1>
         </div>
-        <div className="bg-white rounded-lg shadow p-8 text-center">
+        <div className="bg-white text-gray-900 rounded-lg shadow p-8 text-center">
           <p className="text-red-600 mb-4">
             Error loading data. Please try again later.
           </p>
@@ -121,7 +121,7 @@ export default async function HomePage() {
           <div className="space-y-2">
             {results && results.length > 0 ? (
               results.slice(0, 5).map((match: Match) => (
-                <div key={match.id} className="bg-white rounded-lg shadow p-3">
+                <div key={match.id} className="bg-white text-gray-900 rounded-lg shadow p-3">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-sm w-2/5 text-right">
                       {match.home_team.name}
@@ -152,7 +152,7 @@ export default async function HomePage() {
           <div className="space-y-2">
             {fixtures && fixtures.length > 0 ? (
               fixtures.slice(0, 5).map((match: Match) => (
-                <div key={match.id} className="bg-white rounded-lg shadow p-3">
+                <div key={match.id} className="bg-white text-gray-900 rounded-lg shadow p-3">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-sm">
                       {match.home_team.name}
@@ -185,19 +185,19 @@ export default async function HomePage() {
       <div className="grid grid-cols-3 gap-4 mt-6">
         <Link
           href="/standings"
-          className="bg-white rounded-lg shadow p-4 text-center hover:shadow-md"
+          className="bg-white text-gray-900 rounded-lg shadow p-4 text-center hover:shadow-md"
         >
           <p className="font-bold">Standings</p>
         </Link>
         <Link
           href="/teams"
-          className="bg-white rounded-lg shadow p-4 text-center hover:shadow-md"
+          className="bg-white text-gray-900 rounded-lg shadow p-4 text-center hover:shadow-md"
         >
           <p className="font-bold">Teams</p>
         </Link>
         <Link
           href="/results"
-          className="bg-white rounded-lg shadow p-4 text-center hover:shadow-md"
+          className="bg-white text-gray-900 rounded-lg shadow p-4 text-center hover:shadow-md"
         >
           <p className="font-bold">Results</p>
         </Link>

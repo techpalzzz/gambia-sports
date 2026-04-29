@@ -62,21 +62,21 @@ export default function AdminMatchesPage() {
         </Link>
       </div>
 
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white text-gray-900 rounded-lg shadow overflow-hidden">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-100 border-b">
-              <th className="p-4 text-left">Date/Time</th>
-              <th className="p-4 text-left">Match</th>
-              <th className="p-4 text-center">Score</th>
-              <th className="p-4 text-left">Status</th>
-              <th className="p-4 text-right">Action</th>
+            <tr className="bg-gray-200 border-b">
+              <th className="p-4 text-left text-gray-900">Date/Time</th>
+              <th className="p-4 text-left text-gray-900">Match</th>
+              <th className="p-4 text-center text-gray-900">Score</th>
+              <th className="p-4 text-left text-gray-900">Status</th>
+              <th className="p-4 text-right text-gray-900">Action</th>
             </tr>
           </thead>
           <tbody>
             {matches.map((match) => (
-              <tr key={match.id} className="border-b hover:bg-gray-50">
-                <td className="p-4 text-sm">
+              <tr key={match.id} className="border-b hover:bg-gray-100">
+                <td className="p-4 text-sm text-gray-900">
                   {new Date(match.scheduled_at).toLocaleDateString()}{' '}
                   {new Date(match.scheduled_at).toLocaleTimeString([], {
                     hour: '2-digit',

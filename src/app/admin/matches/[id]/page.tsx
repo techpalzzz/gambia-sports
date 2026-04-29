@@ -103,15 +103,15 @@ export default function EnterResultPage({
       </Link>
       <h1 className="text-xl font-bold mb-6">Enter Match Result</h1>
 
-      <div className="bg-white rounded-lg shadow p-6">
+      <div className="bg-white text-gray-900 rounded-lg shadow p-6">
         <div className="flex items-center justify-between mb-6 text-center">
           <div className="flex-1">
-            <p className="text-gray-600 text-sm mb-2">Home</p>
+            <p className="text-gray-700 text-sm mb-2">Home</p>
             <p className="font-bold">{match.home_team.name}</p>
           </div>
           <span className="text-gray-400 mx-4">vs</span>
           <div className="flex-1">
-            <p className="text-gray-600 text-sm mb-2">Away</p>
+            <p className="text-gray-700 text-sm mb-2">Away</p>
             <p className="font-bold">{match.away_team.name}</p>
           </div>
         </div>
